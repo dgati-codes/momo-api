@@ -1,0 +1,10 @@
+server:
+  port: 9292
+spring:
+  application:
+    name: momo pay
+my-momo: 
+    target-environment: sandbox
+    ocp-apim-subscription-key: d249c050810345fa92326a059d413e9d
+    api-key: 558b5c025e424af68be570158e819cb2
+    api-user-id: 06641f28-1beb-42cd-99f6-2d4b44c1b952
