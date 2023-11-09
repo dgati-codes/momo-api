@@ -10,7 +10,7 @@ import io.dave.momoapi.dto.AuthResponseDto;
         name = "momo-api-auth-client",
         url = "https://sandbox.momodeveloper.mtn.com/remittance"
 )
-public interface AuthClient {
+public interface BasicAuthClient {
 	@PostMapping("/token/")
 	AuthResponseDto getAccessToken(@RequestHeader("Authorization") String authorization,
 	                               @RequestHeader("Ocp-Apim-Subscription-Key") String subscriptionKey);

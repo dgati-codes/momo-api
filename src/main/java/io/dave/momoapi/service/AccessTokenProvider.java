@@ -5,13 +5,13 @@ import java.util.Base64;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import io.dave.momoapi.client.AuthClient;
+import io.dave.momoapi.client.BasicAuthClient;
 import io.dave.momoapi.props.ApiConfigProps;
 
 @Service
 public class AccessTokenProvider {
 	@Autowired
-	private  AuthClient authClient;
+	private  BasicAuthClient authClient;
 	@Autowired
     private  ApiConfigProps props;
 

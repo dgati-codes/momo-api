@@ -16,9 +16,15 @@ public class RemittanceController {
 	@Autowired
 	private ApiClient apiClient;
 	
-	@GetMapping("/get-account-balance")
-	public ResponseEntity<AccountBalanceDto> getAccountBalance() {
-		return ResponseEntity.ok(apiClient.getAccountBalance());
-	}
+	 @GetMapping("/get-account-balance")
+	    public ResponseEntity<?> getAccountBalance() {
+	        try {
+	            // Make a call to the Feign client to get the account balance
+	            AccountBalanceDto accountBalance = apiClient.getAccountBalance();
+	            return ResponseEntity.ok(accountBalance);
+	        } catch (Exception e) {
+	        	return ResponseEntity.ok(e.getMessage()); 
+	        }
+	    }
 	
 }
